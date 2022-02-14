@@ -256,7 +256,7 @@ function checkButtons(tree){
 }
 
 
-// Resize window
+// Resize windows
 // window.onresize = () =>{
 //     ctx.clearRect(0, 0, canvas.width, canvas.height);
 //     drawTree(tree);
