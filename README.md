@@ -1,3 +1,3 @@
 # dnd-test
 
-Ouvrir le fichier index.html
+Pour tester l'application, ouvrir le fichier index.html
