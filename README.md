@@ -1,4 +1,3 @@
 # dnd-test
 
-# Utilisation
-
+Ouvrir le fichier index.html
