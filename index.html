@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mind Map</title>
+</head>
+<body>
+    <div id="container">        
+        <canvas id="canvas"></canvas>
+        <ul class="tree">
+            <li>
+                <div id="root" class="rectangle clickable" onclick="saveRectangle(this)">
+                    <input id="rec-input" type="text" value="main">
+                    <button class="btn" onclick="addChild(this)"><span>+</span></button>
+                </div>                                                          
+            </li>
+        </ul>       
+    </div>
+    <div id="popin">
+        <div id="top">
+            <h1 id="popin-title">SETTINGS<img onclick="removChild()" src="./assets/trash-solid.svg" class="clickable"></h1>
+            
+        </div>
+        <div id="bodyy">
+            <input onchange="copyTitle(this)" id="popin-input" type="text" placeholder="Type something"></div>
+            <h2>color</h2>
+            <ul id="color-container">
+                <div onclick="applyColor(this)" class="color clickable" id="red"> </div>
+                <div onclick="applyColor(this)" class="color clickable" id="yellow"> </div>
+                <div onclick="applyColor(this)" class="color clickable" id="green"> </div>
+                <div onclick="applyColor(this)" class="color clickable" id="blue"> </div>
+            </ul>
+            <h2>radius</h2>
+            <ul id="radius-container">
+                <div class="radius-ele clickable " onclick="reduceRadius()"><</div>
+                <div class="radius-ele" id="radius">9</div>
+                <div class="radius-ele clickable" onclick="addRadius()">></div>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js">
+
+    </script>
+</body>
+</html>
+

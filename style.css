@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "Avenir Regular";
+    src: url("./fonts/Avenir-Regular.ttf");
+}
+
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Avenir Regular";
+}
+
+body{
+    background-color: #3f3f3f;
+    overflow: scroll;
+}
+
+#container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*#canvas { position:absolute; top:0; left:0; z-index:0; height: 100%; width: 100%; }*/
+#canvas{    
+    overflow: scroll;
+    z-index: -1;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.tree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    display: block;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.nested{
+    display: flex;
+    flex-direction: column;    
+}
+
+.rectangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+    z-index: 1;
+    background-color: #2d2d2d;    
+    height: 50px;
+    width: 250px;
+    border: 3px solid rgb(212, 114, 106);
+    border-radius: 10px;
+}
+
+.btn{
+    position: absolute;
+    margin-left: 280px;
+    padding: 10px 12.5px 10px 12.5px;
+    color: 2d2d2d;
+    background-color: white;
+    border: 3px solid rgb(212, 114, 106);
+    border-radius: 100%;    
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.title{
+    font-size: x-large;
+    font-weight: bold;
+    z-index: -1;
+    position: relative;
+    color:white;
+    bottom: 50px;
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+}
+
+#rec-input{
+    display: flex;
+    font-family: "Rowdies";
+    overflow: hidden;
+    position: relative;
+    background-color: #2d2d2d;
+    color: white;
+    height: calc(100%);
+    font-size: large;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline-width: 0;
+}
+
+#popin{
+    position: fixed;
+    z-index: 999;
+    bottom: 50px;
+    left: 30px;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: rgba(107, 106, 106, 1.000);  
+}
+
+#popin-title{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+}
+
+#bodyy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+h2{
+    color:white;
+}
+
+
+.color{
+    height: 50px;
+    width: 50px;    
+    margin: -20px 10px 0px 10px;
+    border-radius: 10px;
+    position: relative;
+    right: 20px;
+    
+}
+#red{
+    background-color: rgb(233, 74, 74);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#yellow{
+    background-color: rgb(226, 226, 118);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#green{
+    background-color: rgb(118, 255, 118);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#blue{
+    background-color: rgb(39, 129, 202);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#color-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popin-input{
+    font-size: large;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3f3f3f;
+    border: none;
+    margin-top: 20px;
+    height: 40px;
+    width: 220px;
+}
+#radius-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radius-ele{
+    position: relative;
+    right: 20px;
+    margin-top: -20px;
+}
+
+#radius{        
+    padding-top: 10px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 10px;
+}
+.radius-ele{
+    position: relative;
+    bottom: 20px;
+    font-size: large;
+    margin: 0px 10px 0 10px;
+}   
+
+.clickable{
+    font-size: xx-large;
+}
+
+.clickable:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.clickable:focus{
+    opacity: 0.5;
+}
+
+#top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 40px;
+    top: 5px;
+}
