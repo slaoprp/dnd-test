@@ -110,15 +110,13 @@ function addChild(elem){
     if (elementRoot.children.length == 3){            
         elem.style.visibility = 'hidden';
     }
-    if (childCounter > 20){
-        container.style.width = "200%";
+    if (childCounter > 10){
+        container.style.width = "200";
         container.style.height = "200%";
         canvas.height = window.innerHeight * 2;
         canvas.width = window.innerWidth * 2;
         ctx.strokeStyle = 'rgb(212, 114, 106)';
         ctx.lineWidth = 3;
-        popin.style.top = "100px";
-        popin.style.left = "600px";
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawTree(tree);
@@ -257,7 +255,7 @@ function checkButtons(tree){
         }    
 }
 
-window.onresize = () =>{
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawTree(tree);
-}
+// window.onresize = () =>{
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     drawTree(tree);
+// }
